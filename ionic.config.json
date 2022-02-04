@@ -1,0 +1,7 @@
+{
+  "name": "clonetwiter",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

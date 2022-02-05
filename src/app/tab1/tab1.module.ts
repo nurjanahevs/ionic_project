@@ -5,16 +5,23 @@ import { FormsModule } from '@angular/forms';
 import { Tab1Page } from './tab1.page';
 import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
 
+import { SharedComponentsModule } from '../components/shared-components.module';
 import { Tab1PageRoutingModule } from './tab1-routing.module';
+import { HttpClientModule } from '@angular/common/http';
+import { CategoryComponent } from '../components/category/category.component';
+import {HeaderComponent} from '../components/header/header.component';
+import { ProductComponent } from '../components/product/product.component';
 
 @NgModule({
   imports: [
-    IonicModule,
+  IonicModule,
     CommonModule,
     FormsModule,
     ExploreContainerComponentModule,
-    Tab1PageRoutingModule
+    Tab1PageRoutingModule,
+    SharedComponentsModule,
+    HttpClientModule
   ],
-  declarations: [Tab1Page]
+  declarations: [Tab1Page,HeaderComponent, CategoryComponent, ProductComponent]
 })
 export class Tab1PageModule {}

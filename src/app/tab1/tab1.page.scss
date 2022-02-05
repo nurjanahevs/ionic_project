@@ -1,0 +1,17 @@
+ion-toolbar .nav{
+    display: flex;
+    flex-direction: row;
+    
+}
+.carousel img{
+    width: 100%;
+    height: 250px;
+}
+
+.category{
+    position:absolute; 
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+
+}

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { SearchComponent } from '../components/search/search.component';
 import { TabsPage } from './tabs.page';
 
 const routes: Routes = [
@@ -12,12 +13,20 @@ const routes: Routes = [
         loadChildren: () => import('../tab1/tab1.module').then(m => m.Tab1PageModule)
       },
       {
+        path: 'feed',
+        loadChildren: () => import('../pages/feed/feed.module').then(m => m.FeedPageModule)
+      },
+      {
         path: 'tab2',
         loadChildren: () => import('../tab2/tab2.module').then(m => m.Tab2PageModule)
       },
       {
         path: 'tab3',
-        loadChildren: () => import('../tab3/tab3.module').then(m => m.Tab3PageModule)
+        loadChildren: () => import('../pages/users/users.module').then(m => m.UsersPageModule)
+      },
+      {
+        path:'search',
+        component: SearchComponent
       },
       {
         path: '',

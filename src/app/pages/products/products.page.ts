@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HTTP } from '@awesome-cordova-plugins/http/ngx';
 
 @Component({
   selector: 'app-products',
@@ -6,10 +7,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./products.page.scss'],
 })
 export class ProductsPage implements OnInit {
-
-  constructor() { }
+  constructor(private http: HTTP) {}
 
   ngOnInit() {
+    this.getData();
   }
 
+  getData() {
+    setTimeout(() => {
+      this.http
+        .get('https://jsonplaceholder.typicode.com/posts', {}, {})
+        .then((data) => {
+          console.log(data.data); // data received by server
+        })
+        .catch((error) => {
+          console.log(error.error); // error message as string
+        });
+    }, 5000);
+  }
 }

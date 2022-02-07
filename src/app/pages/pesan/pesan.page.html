@@ -1,0 +1,59 @@
+<ion-header>
+
+  <ion-toolbar class="nav">
+
+    <ion-buttons slot="start">
+      <ion-router-link href="/">
+        <div class="ion-padding" style="font-weight: bold;">
+          <img src="../../../assets/icon/tabs/back.png" width="16" height="16" alt="">
+        </div>
+      </ion-router-link>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="onClick()">
+        <img src="../../../assets/images/banner1.jpg" style="width:25px; height:25px; border-radius: 50px;" alt="">
+      </ion-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content fullscreen>
+  <ion-list>
+    <ion-list-header>
+      Pesan Baru
+    </ion-list-header>
+    <ion-item>
+      <ion-label>
+        <h2>John Doe</h2>
+        <small>Dec 20, 2022</small>
+        <p>Hallo Gan Apakah barang masih Ready?</p>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        <h2>Me</h2>
+        <small>Dec 20, 2022</small>
+        <p>Hallo Gan Masih banyak Gan</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <form action="">
+      <div class="inputan container">
+        <input type="text" name="message" id="">
+        <button><ion-icon name="send"></ion-icon></button>
+       </div>
+       <!-- <ion-button>
+        <ion-icon name="send"></ion-icon>
+      </ion-button> -->
+    </form>
+  </ion-toolbar>
+</ion-footer>

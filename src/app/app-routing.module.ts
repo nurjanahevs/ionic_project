@@ -42,6 +42,14 @@ const routes: Routes = [
   {
     path: 'productsdetail',
     component: ProductdetailPage
+  },
+  {
+    path: 'pesan',
+    loadChildren: () => import('./pages/pesan/pesan.module').then( m => m.PesanPageModule)
+  },
+  {
+    path: 'chat',
+    loadChildren: () => import('./pages/chat/chat.module').then( m => m.ChatPageModule)
   }
 ];
 @NgModule({

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-productdetail',
@@ -6,10 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./productdetail.page.scss'],
 })
 export class ProductdetailPage implements OnInit {
+  constructor(private nav: NavController) {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
+  // goBack() {
+  //   this.nav.push(HomePage);
+  // }
 }
